@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button.mat-primary {
+    background-color: #25285e !important;
+    color: #fff !important;
+    padding: 4px 10px;
+}
+
+button.mat-primary:disabled {
+    background-color: #99999c !important;
+    color: #fff !important;
+    padding: 4px 10px;
+}

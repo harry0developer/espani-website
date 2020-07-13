@@ -1,0 +1,66 @@
+<div class="content">
+    <div class="logo">
+        <img src="../../../assets/imgs/logo-dark.svg" alt="">
+    </div>
+
+    <mat-card>
+        <!-- <div class="login-options">
+            <button mat-button>Email Address</button>
+            <button mat-button>Phone Number</button>
+        </div> -->
+
+        <mat-tab-group mat-stretch-tabs mat-align-tabs="center">
+            <mat-tab label="Email Address">
+                <p>Enter email address and password</p>
+                <form class="form-email">
+                    <mat-form-field class="email" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Enter your email address">
+                        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="emailFormControl.hasError('required')">
+                            Email is <strong>required</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="password" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput [formControl]="passwordFormControl" placeholder="Enter password">
+                        <mat-error *ngIf="!passwordFormControl.hasError('required')">
+                            Please enter a valid email address
+                        </mat-error>
+                        <mat-error *ngIf="passwordFormControl.hasError('required')">
+                            Password is required
+                        </mat-error>
+                    </mat-form-field>
+                    <button mat-raised-button [disabled]="!emailFormControl.valid || !passwordFormControl.valid" (click)="loginWithEmailAndPassword()" color="primary">Login</button>
+
+                </form>
+
+            </mat-tab>
+            <mat-tab label="Phone Number">
+                <p>Enter phone number </p>
+                <form class="form-phone">
+                    <mat-form-field appearance="outline">
+                        <ngx-mat-intl-tel-input placeholder="Phone number" [enablePlaceholder]="true" [enableSearch]="true" [formControl]="phoneFormControl" name="phone" #phone>
+                        </ngx-mat-intl-tel-input>
+                        <mat-error *ngIf="phoneFormControl.hasError('required')">
+                            Phone number is required
+                        </mat-error>
+                        <mat-error *ngIf="!phoneFormControl.valid">
+                            Invalid phone number
+                        </mat-error>
+                    </mat-form-field>
+                    <button mat-raised-button [disabled]="!phoneFormControl.valid" (click)="loginWithEmailAndPassword()" color="primary">Login</button>
+
+                </form>
+            </mat-tab>
+        </mat-tab-group>
+        <hr>
+        <div class="controls">
+            <button mat-button>Forgot Password</button>
+            <button mat-button>Create Account</button>
+        </div>
+    </mat-card>
+</div>

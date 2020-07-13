@@ -1,0 +1,61 @@
+.content {
+    background-color: #dedede !important;
+    height: 100%;
+    text-align: center;
+    .logo {
+        img {
+            margin: 40px 0;
+            width: 160px;
+        }
+    }
+}
+
+.login-options {
+    background-color: #25285e;
+    position: relative;
+    top: -50px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    button {
+        color: #fff !important;
+        padding-bottom: 20px;
+    }
+}
+
+mat-card {
+    max-width: 600px;
+    min-height: 380px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 16px;
+    .controls {
+        text-align: center;
+        margin-top: 20px;
+    }
+    button {
+        width: 200px;
+        margin-top: 20px;
+    }
+    p {
+        margin: 40px 0;
+    }
+}
+
+mat-form-field {
+    display: block;
+    margin: 10px 10%;
+}
+
+mat-tab-group {
+    padding: 20px !important;
+}
+
+.form-email {
+    margin-top: 20px;
+}
+
+.form-phone {}
+
+mat-error {
+    padding: 4px 0;
+}

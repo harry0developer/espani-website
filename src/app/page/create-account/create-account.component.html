@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+
+                <app-logo></app-logo>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Create Account</h4>
+                    </div>
+                    <p class="tip">Complete the form</p>
+                    <div class="card-form">
+                        <div class="form-row">
+                            <i class="material-icons">face</i>
+                            <mat-form-field color="accent">
+                                <input type="text" matInput placeholder="First Name" />
+                            </mat-form-field>
+                        </div>
+                        <div class="form-row">
+                            <i class="material-icons">face</i>
+                            <mat-form-field color="accent">
+                                <input type="text" matInput placeholder="Last Name" />
+                            </mat-form-field>
+                        </div>
+                        <div class="form-row">
+                            <i class="material-icons">email</i>
+                            <mat-form-field color="accent">
+                                <input type="text" matInput placeholder="Email address" />
+                            </mat-form-field>
+                        </div>
+                        <div class="form-row">
+                            <i class="material-icons">lock_outline</i>
+                            <mat-form-field color="accent">
+                                <input type="password" matInput placeholder="Password" />
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <mat-checkbox style="margin-left: 2px">
+                            <p style="margin-left: 8px">I agree to the <span style="color: #9c27b0; cursor: pointer; font-weight: 400;">terms and conditions</span>.</p>
+                        </mat-checkbox>
+                    </div>
+
+                    <div class="card-footer">
+                        <button mat-raised-button class="btn-primary" (click)="signupWithEmailAndPassword()">Create Account</button>
+                    </div>
+                    <div class="extra-buttons">
+                        <button mat-button class="btn-primary-link" (click)="goToLogin()"> 
+                            <i class="material-icons">lock_outline</i>Login
+                        </button>
+                        <button mat-button class="btn-primary-link" (click)="goToHelp()"> 
+                            <i class="material-icons">help</i>Help
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
